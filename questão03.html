@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3º Calculadora Simples</title>
+</head>
+<body>
+    
+    <script>
+        
+        let numero1 = Number(prompt("Digite o primeiro número:"));
+        let numero2 = Number(prompt("Digite o segundo número:"));
+        let operacao = prompt("Digite a operação desejada (adição, subtração, multiplicação, divisão):").toLowerCase();
+
+        
+        let resultado;
+
+       
+        switch (operacao) {
+            case 'adição':
+            case '+':
+                resultado = numero1 + numero2;
+                break;
+            case 'subtração':
+            case '-':
+                resultado = numero1 - numero2;
+                break;
+            case 'multiplicação':
+            case '*':
+                resultado = numero1 * numero2;
+                break;
+            case 'divisão':
+            case '/':
+                
+                if (numero2 === 0) {
+                    resultado = "Erro: Divisão por zero não é permitida.";
+                } else {
+                    resultado = numero1 / numero2;
+                }
+                break;
+            default:
+                resultado = "Operação inválida. Por favor, digite uma operação válida.";
+                break;
+        }
+
+         alert("Resultado: " + resultado);
+    </script>
+</body>
+</html>
